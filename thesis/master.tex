@@ -1,0 +1,139 @@
+% Format teze zasnovan je na paketu memoir
+% http://tug.ctan.org/macros/latex/contrib/memoir/memman.pdf ili
+% http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf
+% 
+% Prilikom zadavanja klase memoir, navedenim opcijama se podešava 
+% veličina slova (12pt) i jednostrano štampanje (oneside).
+% Ove parametre možete menjati samo ako pravite nezvanične verzije
+% mastera za privatnu upotrebu (na primer, u b5 varijanti ima smisla 
+% smanjiti 
+\documentclass[12pt,oneside]{memoir}
+
+% Paket koji definiše sve specifičnosti mastera Matematičkog fakulteta
+\usepackage{matfmaster}
+%
+% Podrazumevano pismo je ćirilica.
+%   Ako koristite pdflatex, a ne xetex, sav latinički tekst na srpskom jeziku
+%   treba biti okružen sa \lat{...} ili \begin{latinica}...\end{latinica}.
+%
+% Opicija [latinica]:
+%   ako želite da pišete latiniciom, dodajte opciju "latinica" tj.
+%   prethodni paket uključite pomoću: \usepackage[latinica]{matfmaster}.
+%   Ako koristite pdflatex, a ne xetex, sav ćirilički tekst treba biti
+%   okružen sa \cir{...} ili \begin{cirilica}...\end{cirilica}.
+%
+% Opcija [biblatex]:
+%   ako želite da koristite reference na više jezika i umesto paketa
+%   bibtex da koristite BibLaTeX/Biber, dodajte opciju "biblatex" tj.
+%   prethodni paket uključite pomoću: \usepackage[biblatex]{matfmaster}
+%
+% Opcija [b5paper]:
+%   ako želite da napravite verziju teze u manjem (b5) formatu, navedite
+%   opciju "b5paper", tj. prethodni paket uključite pomoću: 
+%   \usepackage[b5paper]{matfmaster}. Tada ima smisla razmisliti o promeni
+%   veličine slova (izmenom opcije 12pt na 11pt u \documentclass{memoir}).
+%
+% Naravno, opcije je moguće kombinovati.
+% Npr. \usepackage[b5paper,biblatex]{matfmaster}
+
+% Paket koji obezbeđuje ispravni prikaz ćiriličkih italik slova kada
+% se koristi pdflatex. Zakomentarisati ako na sistemu koji koristite ovaj
+% paket nije dostupan ili ako ne radi ispravno.
+\usepackage{cmsrb}
+
+\usepackage{listings} % listing programskog koda
+
+% Datoteka sa literaturom u BibTex tj. BibLaTeX/Biber formatu
+\bib{reference}
+
+
+\autor{Лана Матић}
+\naslov{Квантификација несигурности у процени фотометријског црвеног помака галаксија помоћу конформалног предвиђања}
+\godina{2026}
+\mentor{др Младен \textsc{Николић}, ванредни професор\\ Универзитет у Београду, Математички факултет}
+\komisijaA{др Драгана \textsc{Илић}, редовни професор\\ Универзитет у Београду, Математички факултет}
+\komisijaB{др Анђелка \textsc{Ковачевић}, редовни професор\\ Универзитет у Београду, Математички факултет}
+
+% Datum odbrane (obrisati ili iskomentarisati narednu liniju ako datum odbrane nije poznat)
+%\datumodbrane{15. јануар 2016.}
+
+% Apstrakt na srpskom jeziku (u odabranom pismu)
+\apstr{%
+Овде апстракт
+}
+
+% Ključne reči na srpskom jeziku (u odabranom pismu)
+\kljucnereci{фотометријски црвени помак}
+
+\begin{document}
+% ==============================================================================
+% Uvodni deo teze
+\frontmatter
+% ==============================================================================
+% Naslovna strana
+\naslovna
+% Strana sa podacima o mentoru i članovima komisije
+\komisija
+% Strana sa posvetom (u odabranom pismu)
+\posveta{Мами и тати}
+% Strana sa podacima o disertaciji na srpskom jeziku
+\apstrakt
+% Sadržaj teze
+\tableofcontents*
+
+% ==============================================================================
+% Glavni deo teze
+\mainmatter
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+\chapter{Увод}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Преглед литературе}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Подаци}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Методологија}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Резултати}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Дискусија}
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\chapter{Закључак}
+% ------------------------------------------------------------------------------
+
+
+% ------------------------------------------------------------------------------
+% Literatura
+% ------------------------------------------------------------------------------
+% \nocite{*} prikazuje sve unose iz reference.bib, čak i one koji nisu
+% eksplicitno citirani sa \cite{} u tekstu. Uklonite kada počnete da
+% citirate izvore direktno u tekstu, kako bi se prikazali samo citirani.
+\nocite{*}
+\literatura
+
+% ==============================================================================
+% Završni deo teze i prilozi
+\backmatter
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% Biografija kandidata
+\begin{biografija}
+\textbf{Лана Матић}
+\end{biografija}
+% ------------------------------------------------------------------------------
+
+\end{document} 
