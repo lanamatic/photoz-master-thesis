@@ -40,7 +40,7 @@ mpl.rcParams.update({
     "axes.axisbelow": True,
 })
 
-PALETTE = ["#1f4e79", "#7f9fbf", "#c98b3a", "#9a3b3b"]
+PALETTE = ["#1f4e79", "#65a958", "#c98b3a", "#873838"]
 
 
 def fig_nz(splits) -> None:
