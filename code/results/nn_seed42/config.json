@@ -1,0 +1,25 @@
+{
+  "model": "nn",
+  "lr": 0.0005,
+  "max_epochs": 200,
+  "patience": 15,
+  "batch_size": 256,
+  "dropout": 0.0,
+  "seed": 42,
+  "features": [
+    "g_cmodel_mag",
+    "r_cmodel_mag",
+    "i_cmodel_mag",
+    "z_cmodel_mag",
+    "y_cmodel_mag",
+    "g_r",
+    "r_i",
+    "i_z",
+    "z_y"
+  ],
+  "n_params": 122810,
+  "best_epoch": 38,
+  "best_val": 0.0970822115595689,
+  "device": "mps",
+  "elapsed_sec": 121.47973799705505
+}

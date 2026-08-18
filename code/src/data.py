@@ -176,7 +176,7 @@ class Standardizer:
     std: np.ndarray | None = None
 
     def fit(self, X: np.ndarray) -> "Standardizer":
-        scaler = StandardScaler.fit(X)
+        scaler = StandardScaler().fit(X)
         self.mean = scaler.mean_
         self.std = scaler.scale_
         return self
@@ -184,7 +184,7 @@ class Standardizer:
     def transform(self, X: np.ndarray) -> np.ndarray:
         if self.mean is None:
             raise RuntimeError("Standardizer is not fitted (call .fit first)")
-        return (X - self.mean) / self.std
+        return ((X - self.mean) / self.std).astype(X.dtype)
 
     def fit_transform(self, X: np.ndarray) -> np.ndarray:
         return self.fit(X).transform(X)
