@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\caption{Метрике на тест скупу, модел mc_dropout.}
+\label{tab:metrics-mc_dropout}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Распон & N & outlier & catastrophic & rms & bias & scatter & cov_1sigma & width_1sigma & frac_3sigma \\
+\midrule
+0-0.5 & 21.170 & 0,0392 & 0,0095 & 0,1615 & 0,0266 & 0,0276 & 0,3053 & 0,0334 & 0,2975 \\
+0.5-1 & 14.815 & 0,0417 & 0,0138 & 0,1086 & 0,0156 & 0,0368 & 0,3101 & 0,0458 & 0,2938 \\
+1-2 & 3.007 & 0,1822 & 0,0585 & 0,1759 & -0,0157 & 0,1365 & 0,3565 & 0,1642 & 0,2611 \\
+>2 & 1.922 & 0,2830 & 0,2055 & 0,2350 & -0,1289 & 0,2607 & 0,4370 & 0,2808 & 0,2784 \\
+overall & 40.914 & 0,0621 & 0,0239 & 0,1505 & 0,0122 & 0,0362 & 0,3170 & 0,0591 & 0,2926 \\
+\bottomrule
+\end{tabular}
+\end{table}

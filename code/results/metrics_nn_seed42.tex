@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\caption{Метрике на тест скупу, модел nn.}
+\label{tab:metrics-nn}
+\begin{tabular}{lrrrrrr}
+\toprule
+Распон & N & outlier & catastrophic & rms & bias & scatter \\
+\midrule
+0-0.5 & 21.170 & 0,0376 & 0,0096 & 0,1658 & 0,0240 & 0,0268 \\
+0.5-1 & 14.815 & 0,0422 & 0,0144 & 0,1129 & 0,0163 & 0,0364 \\
+1-2 & 3.007 & 0,1879 & 0,0595 & 0,1802 & -0,0104 & 0,1390 \\
+>2 & 1.922 & 0,2726 & 0,2071 & 0,2346 & -0,1240 & 0,2433 \\
+overall & 40.914 & 0,0613 & 0,0243 & 0,1543 & 0,0117 & 0,0353 \\
+\bottomrule
+\end{tabular}
+\end{table}
