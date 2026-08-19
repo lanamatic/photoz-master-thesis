@@ -21,5 +21,5 @@
   "best_epoch": 38,
   "best_val": 0.0970822115595689,
   "device": "mps",
-  "elapsed_sec": 121.47973799705505
+  "elapsed_sec": 120.17273616790771
 }
